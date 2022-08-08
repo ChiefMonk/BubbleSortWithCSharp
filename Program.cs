@@ -38,17 +38,19 @@ while (counter < arraySize)
 	}
 }
 
-var sortedArray = BubbleSort(inputArray);
+BubbleSortArray(inputArray);
 Console.WriteLine();
 Console.Write("Sorted Array: [ ");
-foreach (var p in sortedArray)
+foreach (var p in inputArray)
 	Console.Write(p + " ");
 Console.Write("]");
 Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("Press ENTER to Exit the program");
 Console.Read();
 
 
-static int[] BubbleSort(int[] inputArray)
+static void BubbleSortArray(int[] inputArray)
 {
 	for (int j = 0; j <= inputArray.Length - 2; j++)
 	{
@@ -62,8 +64,6 @@ static int[] BubbleSort(int[] inputArray)
 			}
 		}
 	}
-
-	return inputArray;
 }
 
 
