@@ -3,6 +3,7 @@
 
 Bubble sort is a simple sorting algorithm. This sorting algorithm is a comparison-based algorithm in which each pair of adjacent elements is compared and the elements are swapped if they are not in order.
 
+## Explanation
 Let’s say our int has 5 elements −
 ```
 int[] arr = { 78, 55, 45, 98, 13 };
@@ -31,92 +32,91 @@ This was the first iteration. After performing all the iterations, e will get ou
 3, 45, 55, 78, 93
 ```
 
-## Example
+## Code Example
 Let us see an example with X elements in an array and sort it.
 ```
-  using System;
+using System;
 
-	namespace CMPG323._37016776.BubbleSort
+namespace CMPG323._37016776.BubbleSort
+{
+	internal class Program
 	{
-		internal class Program
+		static void Main(string[] args)
 		{
-			static void Main(string[] args)
+			Console.WriteLine("CMPG 323 Homework Exercise 1 & 2: Bubble Sort Algorithm using C");
+			Console.WriteLine();
+
+			int arraySize = 0;
+
+			while (arraySize < 2)
 			{
-				Console.WriteLine("CMPG 323 Homework Exercise 1 & 2: Bubble Sort Algorithm using C");
-				Console.WriteLine();
-
-
-				int arraySize = 0;
-
-				while (arraySize < 2)
+				try
 				{
-					try
-					{
-						Console.Write("How many integers go you want to sort:  ");
-						arraySize = int.Parse(Console.ReadLine() ?? string.Empty);
-					}
-					catch
-					{
-						Console.WriteLine("Please enter a valid integer greater than 2");
-						Console.WriteLine();
-					}
+					Console.Write("How many integers go you want to sort:  ");
+					arraySize = int.Parse(Console.ReadLine() ?? string.Empty);
 				}
-
-				Console.WriteLine();
-				Console.WriteLine($"Please enter the {arraySize} integers to be sorted, one at a time");
-				int[] inputArray = new int[arraySize];
-				int counter = 0;
-
-				while (counter < arraySize)
+				catch
 				{
-					try
-					{
-						Console.Write($"Enter integer {counter + 1}: ");
-						inputArray[counter] = int.Parse(Console.ReadLine() ?? string.Empty);
-						counter++;
-					}
-					catch
-					{
-						Console.WriteLine("Please enter a valid integer");
-						Console.WriteLine();
-					}
+					Console.WriteLine("Please enter a valid integer greater than 2");
+					Console.WriteLine();
 				}
-
-				BubbleSortArray(inputArray);
-				Console.WriteLine();
-				Console.Write("Sorted Array: [ ");
-				foreach (var p in inputArray)
-					Console.Write(p + " ");
-				Console.Write("]");
-				Console.WriteLine();
-				Console.WriteLine();
-				Console.WriteLine("Press ENTER to Exit the program");
-				Console.Read();
 			}
 
-			private static void BubbleSortArray(int[] inputArray)
+			Console.WriteLine();
+			Console.WriteLine($"Please enter the {arraySize} integers to be sorted, one at a time");
+			int[] inputArray = new int[arraySize];
+			int counter = 0;
+
+			while (counter < arraySize)
 			{
-				for (int j = 0; j <= inputArray.Length - 2; j++)
+				try
 				{
-					for (int i = 0; i <= inputArray.Length - 2; i++)
+					Console.Write($"Enter integer {counter + 1}: ");
+					inputArray[counter] = int.Parse(Console.ReadLine() ?? string.Empty);
+					counter++;
+				}
+				catch
+				{
+					Console.WriteLine("Please enter a valid integer");
+					Console.WriteLine();
+				}
+			}
+
+			BubbleSortArray(inputArray);
+			Console.WriteLine();
+			Console.Write("Sorted Array: [ ");
+			foreach (var p in inputArray)
+				Console.Write(p + " ");
+			Console.Write("]");
+			Console.WriteLine();
+			Console.WriteLine();
+			Console.WriteLine("Press ENTER to Exit the program");
+			Console.Read();
+		}
+
+		private static void BubbleSortArray(int[] inputArray)
+		{
+			for (int j = 0; j <= inputArray.Length - 2; j++)
+			{
+				for (int i = 0; i <= inputArray.Length - 2; i++)
+				{
+					if (inputArray[i] > inputArray[i + 1])
 					{
-						if (inputArray[i] > inputArray[i + 1])
-						{
-							var temp = inputArray[i + 1];
-							inputArray[i + 1] = inputArray[i];
-							inputArray[i] = temp;
-						}
+						var temp = inputArray[i + 1];
+						inputArray[i + 1] = inputArray[i];
+						inputArray[i] = temp;
 					}
 				}
 			}
 		}
 	}
+}
 ```
 
 ## Output
-Sorted:
+Sorted Array:
 ```
-13 45 55 78 98
+[ 13 45 55 78 98 ]
 ```
 
 ## Links
