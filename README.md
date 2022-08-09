@@ -1,4 +1,4 @@
-﻿# CMPG 323 Development Homework Exercise 1 & 2: Bubble Sort Algorithm using C#
+﻿# CMPG 323 Production Homework Exercise 1 & 2: Bubble Sort Algorithm using C#
 <img src="https://github.com/ChiefMonk/BubbleSortWithCSharp/blob/main/balloon-bubble-text.png" width="100" /> 
 
 Bubble sort is a simple sorting algorithm. This sorting algorithm is a comparison-based algorithm in which each pair of adjacent elements is compared and the elements are swapped if they are not in order.
