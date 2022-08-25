@@ -93,7 +93,7 @@ namespace CMPG323._37016776.BubbleSort
 			Console.WriteLine("Press ENTER to Exit the program");
 			Console.Read();
 		}
-
+		
 		private static void BubbleSortArray(int[] inputArray)
 		{
 			for (int j = 0; j <= inputArray.Length - 2; j++)
